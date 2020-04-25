@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alice Sebego">
+    <meta name="description" content="Side project : quizz dédié à mon club de foot de coeur pour travailler Javascript">
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" href="css/all.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>Quizz FCGB Girls</title>
+</head>
+<body>
+    <!--Header -->
+    <header>
+        <!-- count score and chrono -->
+        <div id="chrono">
+            <span class="title-time">Votre chrono</span><br>
+            0 <span class="time">min</span> : 00 <span class="time">sec</span>
+        </div>
+        <!-- End of count score and chrono -->
+        <div class="jumbotron">
+            
+            <h1 class="display-4"><i class="fas fa-futbol"></i> Connais-tu bien les Féminines des Girondins de Bordeaux ?</h1>
+            <p class="lead">Teste tes connaissances sur la section féminine du Football Club Girondins de Bordeaux</p>
+            <hr class="my-4">
+            <p>(Re)découvre, à travers ses débuts, l'équipe féminine girondine, dignes représentantes de la scapulaire :)</p>
+            <div class="video-background">
+                <div class="video-foreground embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sQEE4sXTRPE?controls=0&showinfo=0&rel=0&loop=1&playlist=sQEE4sXTRPE" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End of header -->
+    <section class="quizz">
+        <!-- Quizz body -->
+        <h2 id="start-title">Fais ce quizz pour tester vos connaissances
+        </h2>
+        <p class="text-center"><span class="rules">Réponds aux questions pendant le temps imparti : tu as 1 minute 30 <br> A toi de jouer !</span></p>
+        <!-- Question 1 -->
+        <div class="question" id="question1">
+            <p class="interro">1 - Grâce à l'accord avec quel club est née la section féminine du Football Club des Girondins de Bordeaux ?</p>
+            <div class="form-check">
+                <input class="form-check-input reponse1" type="radio" name="club" id="Bruges" value="Bruges" >
+                <label class="form-check-label" for="Bruges">
+                    Entente Sportive de Bruges
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input reponse1" type="radio" name="club" id="Merignac" value="Merignac" >
+                <label class="form-check-label" for="Merignac">
+                    Sportif Athlétique Mérignacais
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input reponse1" type="radio" name="club" id="Blanquefort" value="Blanquefort" >
+                <label class="form-check-label" for="Blanquefort">
+                    Entente Sportive Blanquefortaise
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input reponse1" type="radio" name="club" id="Lormont" value="Lormont" >
+                <label class="form-check-label" for="Lormont">
+                    Union Sportive Lormontaise
+                </label>
+            </div>
+        </div>
+        <!-- Question 2-->
+        <div class="question" id="question2">
+            <p class="interro">2 - En quelle année est née la section féminine FCGB ?</p>
+            <div class="form-check reponse2">
+                <input class="form-check-input" type="radio" name="year" id="1998" value="1998" >
+                <label class="form-check-label" for="1998">
+                    1998
+                </label>
+            </div>
+            <div class="form-check reponse2">
+                <input class="form-check-input" type="radio" name="year" id="2007" value="2007" >
+                <label class="form-check-label" for="2007">
+                    2007
+                </label>
+            </div>
+            <div class="form-check reponse2">
+                <input class="form-check-input" type="radio" name="year" id="2009" value="2009" >
+                <label class="form-check-label" for="2009">
+                    2009
+                </label>
+            </div>
+            <div class="form-check reponse2">
+                <input class="form-check-input" type="radio" name="year" id="2015" value="2015" >
+                <label class="form-check-label" for="2015">
+                    2015
+                </label>
+            </div>
+        </div>
+        <!-- Question 3-->
+        <div class="question" id="question3">
+            <p class="interro">3 - L'équipe féminine a joué, pour la 1ère fois au stade Matmut-Atlantique le :</p>
+            <div class="form-check reponse3">
+                <input class="form-check-input" type="radio" name="matchGallice" id="11sept" value="11sept" >
+                <label class="form-check-label" for="11sept">
+                    11 septembre 2015
+                </label>
+            </div>
+            <div class="form-check reponse3">
+                <input class="form-check-input" type="radio" name="matchGallice" id="26sept" value="26sept" >
+                <label class="form-check-label" for="26sept">
+                    26 septembre 2015
+                </label>
+            </div>
+            <div class="form-check reponse3">
+                <input class="form-check-input" type="radio" name="matchGallice" id="20dec" value="20dec" >
+                <label class="form-check-label" for="20dec">
+                    20 décembre 2015
+                </label>
+            </div>
+            <div class="form-check reponse3">
+                <input class="form-check-input" type="radio" name="matchGallice" id="20mars" value="20mars" >
+                <label class="form-check-label" for="20mars">
+                    20 mars 2016
+                </label>
+            </div>
+        </div>
+        <!-- Question 4-->
+        <div class="question" id="question4">
+            <p class="interro">4 - Elle a intégré l'équipe en janvier 2017 :</p>
+            <div class="form-check reponse4">
+                <input class="form-check-input" type="radio" name="playeuse2017" id="Chatelin" value="Chatelin" >
+                <label class="form-check-label" for="Chatelin">
+                    Delphine Chatelin
+                </label>
+            </div>
+            <div class="form-check reponse4">
+                <input class="form-check-input" type="radio" name="playeuse2017" id="Cascarino" value="Cascarino" >
+                <label class="form-check-label" for="Cascarino">
+                    Estelle Cascarino
+                </label>
+            </div>
+            <div class="form-check reponse4">
+                <input class="form-check-input" type="radio" name="playeuse2017" id="Asseyi" value="Asseyi" >
+                <label class="form-check-label" for="Asseyi">
+                    Viviane Asseyi
+                </label>
+            </div>
+            <div class="form-check reponse4">
+                <input class="form-check-input" type="radio" name="playeuse2017" id="Gilles" value="Gilles" >
+                <label class="form-check-label" for="Gilles">
+                    Vanessa Gilles
+                </label>
+            </div>
+        </div>
+        <!-- Question 5-->
+        <div class="question" id="question5">
+            <p class="interro">5 - Quel est l'un des stades de la section féminine ?</p>
+            <div class="form-check reponse5">
+                <input class="form-check-input" type="radio" name="stadium" id="Brettes" value="Brettes" >
+                <label class="form-check-label" for="Brettes">
+                    Le stade Robert Brettes (Mérignac)
+                </label>
+            </div>
+            <div class="form-check reponse5">
+                <input class="form-check-input" type="radio" name="stadium" id="Stehelin" value="Stehelin" >
+                <label class="form-check-label" for="Stehelin">
+                    Le stade Stehelin (Bordeaux)
+                </label>
+            </div>
+            <div class="form-check reponse5">
+                <input class="form-check-input" type="radio" name="stadium" id="Miart" value="Miart" >
+                <label class="form-check-label" for="Miart">
+                    Le stade Emile Miart (Blanquefort)
+                </label>
+            </div>
+            <div class="form-check reponse5">
+                <input class="form-check-input" type="radio" name="stadium" id="Sainte-Germaine" value="Sainte-Germaine" >
+                <label class="form-check-label" for="Sainte-Germaine">
+                    Le stade Sainte-Germaine (Le Bouscat)
+                </label>
+            </div>
+        </div>
+        <!-- Question 6-->
+        <div class="question" id="question6">
+            <p class="interro">6 - En Division 1 (D1), pour la saison 2018/19, nos girondines se sont classées :</p>
+            <div class="form-check reponse6">
+                <input class="form-check-input" type="radio" name="rank2019" id="3eme" value="3eme" >
+                <label class="form-check-label" for="3eme">
+                    3ème
+                </label>
+            </div>
+            <div class="form-check reponse6">
+                <input class="form-check-input" type="radio" name="rank2019" id="4eme" value="4eme" >
+                <label class="form-check-label" for="4eme">
+                    4ème
+                </label>
+            </div>
+            <div class="form-check reponse6">
+                <input class="form-check-input" type="radio" name="rank2019" id="7eme" value="7eme" >
+                <label class="form-check-label" for="7eme">
+                    7ème
+                </label>
+            </div>
+            <div class="form-check reponse6">
+                <input class="form-check-input" type="radio" name="rank2019" id="9eme" value="9eme" >
+                <label class="form-check-label" for="9eme">
+                    9ème
+                </label>
+            </div>
+        </div>
+        <!-- Question 7-->
+        <div class="question" id="question7">
+            <p class="interro">7 - Pour Bordeaux vs Lyon le 26 janvier 2020 pour la D1, le match FCGB-OL se conclut à :</p>
+            <div class="form-check reponse7">
+                <input class="form-check-input" type="radio" name="fcgbol2020" id="00" value="00" >
+                <label class="form-check-label" for="00">
+                    0-0
+                </label>
+            </div>
+            <div class="form-check reponse7">
+                <input class="form-check-input" type="radio" name="fcgbol2020" id="11" value="11" >
+                <label class="form-check-label" for="11">
+                    1-1
+                </label>
+            </div>
+            <div class="form-check reponse7">
+                <input class="form-check-input" type="radio" name="fcgbol2020" id="21" value="21" >
+                <label class="form-check-label" for="21">
+                    2-1
+                </label>
+            </div>
+            <div class="form-check reponse7">
+                <input class="form-check-input" type="radio" name="fcgbol2020" id="16" value="16" >
+                <label class="form-check-label" for="16">
+                    1-6
+                </label>
+            </div>
+        </div>
+        <!-- Question 8-->
+        <div class="question" id="question8">
+            <p class="interro">8 - Combien des footballeuses des Girondins de Bordeaux ont été appelées en Bleues, pour la 1ère édition du Tournoi de France en 2020 ?</p>
+            <div class="form-check reponse8">
+                <input class="form-check-input" type="radio" name="teamFrance" id="2" value="2" >
+                <label class="form-check-label" for="2">
+                    2
+                </label>
+            </div>
+            <div class="form-check reponse8">
+                <input class="form-check-input" type="radio" name="teamFrance" id="3" value="3" >
+                <label class="form-check-label" for="3">
+                    3
+                </label>
+            </div>
+            <div class="form-check reponse8">
+                <input class="form-check-input" type="radio" name="teamFrance" id="4" value="4" >
+                <label class="form-check-label" for="4">
+                    4
+                </label>
+            </div>
+            <div class="form-check reponse8">
+                <input class="form-check-input" type="radio" name="teamFrance" id="5" value="5" >
+                <label class="form-check-label" for="5">
+                    5
+                </label>
+            </div>
+        </div>
+         <!-- Question 9-->
+         <div class="question" id="question9">
+            <p class="interro">9 - Quelle joueuse a été formée au club ?</p>
+            <div class="form-check reponse9">
+                <input class="form-check-input" type="radio" name="trainingInBx" id="Nayler" value="Nayler" >
+                <label class="form-check-label" for="Nayler">
+                    Erin Nayler
+                </label>
+            </div>
+            <div class="form-check reponse9">
+                <input class="form-check-input" type="radio" name="trainingInBx" id="Petiteau" value="Petiteau" >
+                <label class="form-check-label" for="Petiteau">
+                    Marie Petiteau
+                </label>
+            </div>
+            <div class="form-check reponse9">
+                <input class="form-check-input" type="radio" name="trainingInBx" id="Lavogez" value="Lavogez" >
+                <label class="form-check-label" for="Lavogez">
+                    Claire Lavogez
+                </label>
+            </div>
+            <div class="form-check reponse9">
+                <input class="form-check-input" type="radio" name="trainingInBx" id="Tarrieu" value="Tarrieu" >
+                <label class="form-check-label" for="Tarrieu">
+                    Mylaine Tarrieu
+                </label>
+            </div>
+        </div>
+        <!-- Question 10-->
+        <div class="question" id="question10">
+            <p class="interro">10 - Qui est le coach des footballeuses girondines depuis le 7 juin 2019 ?</p>
+            <div class="form-check reponse10">
+                <input class="form-check-input" type="radio" name="coach" id="Dauba" value="Dauba" >
+                <label class="form-check-label" for="Dauba">
+                    Jérôme Dauba
+                </label>
+            </div>
+            <div class="form-check reponse10">
+                <input class="form-check-input" type="radio" name="coach" id="Losa" value="Losa" >
+                <label class="form-check-label" for="Losa">
+                    Pedro Martinez Losa
+                </label>
+            </div>
+            <div class="form-check reponse10">
+                <input class="form-check-input" type="radio" name="coach" id="Garcia" value="Garcia" >
+                <label class="form-check-label" for="Garcia">
+                    José Barsala Garcia
+                </label>
+            </div>
+            <div class="form-check reponse10">
+                <input class="form-check-input" type="radio" name="coach" id="Sousa" value="Sousa" >
+                <label class="form-check-label" for="Sousa">
+                    Paulo Sousa
+                </label>
+            </div>
+        </div>
+        <!-- Question 11-->
+        <div class="question" id="question11">
+            <p class="interro">11 - Dans quel club jouait Viviane Asseyi avant de rejoindre Bordeaux ?</p>
+            <div class="form-check reponse11">
+                <input class="form-check-input" type="radio" name="exTeamAsseyi" id="Lyonnais" value="Lyonnais" >
+                <label class="form-check-label" for="Lyonnais">
+                    Olympique Lyonnais
+                </label>
+            </div>
+            <div class="form-check reponse11">
+                <input class="form-check-input" type="radio" name="exTeamAsseyi" id="Marseille" value="Marseille" >
+                <label class="form-check-label" for="Marseille">
+                    Olympique de Marseille
+                </label>
+            </div>
+            <div class="form-check reponse11">
+                <input class="form-check-input" type="radio" name="exTeamAsseyi" id="Paris" value="Paris" >
+                <label class="form-check-label" for="Paris">
+                    Paris Football Club
+                </label>
+            </div>
+            <div class="form-check reponse11">
+                <input class="form-check-input" type="radio" name="exTeamAsseyi" id="Montpellier" value="Montpellier" >
+                <label class="form-check-label" for="Montpellier">
+                    Montpellier Hérault Sport Club
+                </label>
+            </div>
+        </div>
+        <!-- button in order to show user's score -->
+        <button class="btn btn-primary btn-lg btn-block" type="submit" id="showScore" disabled>Afficher mon score</button>
+    </section>
+    <!--Section with more informations of team -->
+    <section class="information" id="information">
+        <div class="more">
+            <h2>Vous souhaitez en savoir plus sur la section féminine FCGB ?    
+            </h2>
+            <div class="row row-cols-1 row-cols-md-3">
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="images/section-feminine-fc-girondins-de-bordeaux.jpg" class="card-img-top" alt="section-feminine-fc-girondins-de-bordeaux">
+                        <div class="card-body">
+                        <h5 class="card-title">Girondins33.com</h5>
+                        <p class="card-text">Toute l'actualité de la section féminine des Girondins de Bordeaux
+                            sur le site d'informations Girondins33.com</p>
+                        <a class="btn btn-primary" href="https://www.girondins33.com/feminines-girondins" target="_blank" role="button">Visitez le site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="images/match-girondins-de-bordeaux-guingamps.jpg" class="card-img-top" alt="match-girondins-de-bordeaux-guingamps">
+                        <div class="card-body">
+                        <h5 class="card-title">Site officiel du FCGB</h5>
+                        <p class="card-text">Toutes les informations et actualités de l'équipe féminine des Girondins de Bordeaux
+                            sur le site web officiel du club</p>
+                        <a class="btn btn-primary" href="https://www.girondins33.com/feminines-girondins" target="_blank" role="button">Visitez le site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="card">
+                        <img src="images/supporters-et-fans-du-fc-girondins-de-bordeaux.jpg" class="card-img-top" alt="section-feminine-fc-girondins-de-bordeaux">
+                        <div class="card-body">
+                        <h5 class="card-title">Girondins4Ever</h5>
+                        <p class="card-text">Les Girondins de Bordeaux à travers celles et ceux qui font aussi vivre le club,
+                            sur le site des fans de la scapulaire Girondins4Ever.com</p>
+                        <a class="btn btn-primary" href="https://www.girondins4ever.com/" target="_blank" role="button">Visitez le site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Avril 2020 | Side Project en clin d'oeil à la section féminine des Girondins de Bordeaux</p>
+        <p><span class="credit"><strong>Crédit photos et images</strong> : <a href="https://www.flickr.com/photos/rg33/3480721289/in/photolist-oAHcTq-TnREKJ-QZLxyC-TnRFEE-6vHUai-TnRDgw-5FBTzg-TnRHtu-TnSfxy-SJaKJM-TnRJvQ-TLmwMv-TUgCaS-67R3ZF-6tWBki-7BBESQ-6iDMrh-6q6AJa-6izBb2-6izKQk-6S2JLz-6izDzi-6iDGeS-7dudd5-7eyMu8-7dqipP-PFmhfQ-Jmyxuw-NPqpy-NiqH9v">RG1033</a>
+        et <a href="https://www.flickr.com/photos/101369467@N08/36703309892/">saintmalojmgsports</a> ainsi que le site <a href="https://giphy.com/">Giphy</a></span></p>
+    </footer>
+
+    <!-- Script bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+    <script src="index.js"></script>
+    <!-- <script src="vendor/jquery.js"></script>
+    <script src="vendor/popper.js"></script>
+    <script src="vendor/bootstrap.js"></script> -->
+</body>
+</html>
