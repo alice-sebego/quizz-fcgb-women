@@ -1,52 +1,50 @@
-/**-----------------------
- * Fonction chrono
------------------------- */
+import Chrono from './chrono.js';
 
-// Secondes chrono
-let sec = 0;
+const $time = document.querySelector("#time");
 
-// Minutes chrono
-let min = 0;
+let startmin = 1.5;
+let time = startmin * 60;
+let min = Math.floor(time / 60);
+let sec = time % 60;
+let count = new Chrono(startmin, time, min, sec, $time);
 
-let norepeat = true; // chrono no repeat
+let checkInterval = false;
+let timer;
 
-const chrono = () => { 
-	
-	if (sec < 59) {
-		sec++;
-		if (sec < 10) {
-			sec = "0" + sec;
-		}
-	}
-	else if (sec = 59) {
-		min++;
-		sec = "0" + 0;
-	} 
+count.displayTime();
 
-	document.getElementById("chrono").innerHTML = '<span class="title-time">Votre chrono</span><br>' + min +' '+ '<span class="time">min</span>'+ ' '+':' +' '+ sec +' '+'<span class="time">sec</span>';
-	
-	if(sec == 30 && min == 1){
-		gameOver();
-	}
-}
+const countdown = () => {
 
-/**
- * Stopper game if time is more than 1'30'' 
- * and reload the game
- */
+    if(!checkInterval) {
 
-let timerID = 0;
+        checkInterval = true;
 
-const gameOver = () => {
-	
-	clearInterval(timerID);
-	alert("GAME OVER :/ Clique sur OK pour rejouer");
-	location.reload();
-}
+        count.countdown();
+        count.displayTime();
 
-const stopChrono = () => {
-    clearInterval(timerID);
-} 
+        timer = setInterval(() => {
+
+            if( count.timeTotal > 0){
+            
+                count.countdown();
+                count.displayTime();
+        
+            } else if(count.timeTotal === 0){
+                
+                clearInterval(timer);
+                count.displayTime();
+                alert("GAME OVER \n Clique sur OK pour rejouer");
+                location.reload();
+
+            } 
+
+        }, 1000);
+
+    } else { 
+        return;
+    }
+
+};
 /** -------------------------------
 * Gestion of Color's div questions
 -------------------------------- */
@@ -272,14 +270,11 @@ for(let i = 0; i <= questions.length; i++){
     answersGood[i].addEventListener('change', () => {
 
         if(answersGood[0].checked){
-            if (norepeat == true) {
-                timerID = setInterval('chrono()', 1000);
-                norepeat = false;
-            } 
+            countdown();
         }
 
         if(answersGood[10].checked){
-            stopChrono();
+            clearInterval(timer);
             showTheScore.disabled = false;
         }
         
@@ -317,10 +312,8 @@ const disabledBadAnswer1 = () => {
                    badAnswerquestion1.disabled = true;
                 });
 
-                if (norepeat == true) {
-                    timerID = setInterval('chrono()', 1000);
-                    norepeat = false;
-                }
+                countdown();
+
                 const resolveAnswer1 = document.createElement('p');
                 resolveAnswer1.setAttribute('class','resolveAnswer');
                 resolveAnswer1.textContent = 'La bonne réponse est l\'Entente Sportive Blanquefortaise';
@@ -558,7 +551,9 @@ const disabledBadAnswer11 = () => {
            resolveAnswer11.setAttribute('class','resolveAnswer');
            resolveAnswer11.textContent = 'La bonne réponse est l\'Olympique de Marseille';
            question11.append(resolveAnswer11);
-           stopChrono();
+           
+           clearInterval(timer);
+
            showTheScore.disabled = false;
         });    
     }
