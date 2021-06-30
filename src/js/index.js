@@ -2,6 +2,7 @@ import Chrono from './chrono.js';
 import { questions, allBadAnswers, answersGood, resolveAnswers } from './dom-element.js';
 import { addPointOnTheScore, showScore } from './handle-score.js';
 import { disabledBadAnswer } from './handle-wrong.js';
+import { setCurrentYear } from './util.js';
 
 /** -------------------------------
 * Handle Chrono on the interface
@@ -51,6 +52,10 @@ const countdown = () => {
     }
 
 };
+
+// Add current year on the footer
+const $year = document.querySelector("#year");
+setCurrentYear($year);
 
 /** --------------------------------
  * Management of wrong answers
