@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import Chrono from './chrono.js';
 import { questions, allBadAnswers, answersGood, resolveAnswers } from './dom-element.js';
 import { addPointOnTheScore, showScore } from './handle-score.js';

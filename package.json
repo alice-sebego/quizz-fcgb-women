@@ -1,0 +1,34 @@
+{
+  "name": "quizz-fcgb-women",
+  "version": "1.0.0",
+  "description": "Quizz dédié à la section féminine du FC Girondins de Bordeaux",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alice-sebego/quizz-fcgb-women.git"
+  },
+  "keywords": [],
+  "author": "Alice",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alice-sebego/quizz-fcgb-women/issues"
+  },
+  "homepage": "https://github.com/alice-sebego/quizz-fcgb-women#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.41.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

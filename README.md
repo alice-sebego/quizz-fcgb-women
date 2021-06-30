@@ -19,6 +19,15 @@ En fonction du score, le message s'adapte selon les points acquis.
 Envie de faire un pied de nez à ma petite frustration :) 
 J'aurais dû assister à la 1/2 finale de la Coupe de France contre le PSG, le samedi 21 mars 2020 qui avait été reportée 
 
+## Dependances Node Package Manager
+Pour installer les dépendances : `npm install`
+
+Pour compiler les fichiers JS : `npm run build`
+
+Pour écouter chaque changement sur les fichiers JS et automatiser la compilation : `npm run watch`
+
+Pour lancer l'application sur un serveur local : `npm run start`
+
 ## La progression … ?
 Cette app web est fonctionnelle en l'état et j'y ajouterai des fonctionnalités supplémentaires.
 Mais si vous avez des améliorations à proposer, elles sont les bienvenues
