@@ -1,4 +1,5 @@
 import Chrono from './chrono.js';
+import { addPointOnTheScore, showScore } from './handle-score.js';
 
 const $time = document.querySelector("#time");
 
@@ -45,6 +46,7 @@ const countdown = () => {
     }
 
 };
+
 /** -------------------------------
 * Gestion of Color's div questions
 -------------------------------- */
@@ -225,48 +227,16 @@ const answersGood = [
 * Gestion of score for correct answer
 --------------------------------- */
 const goodAnswers = [];
-const addPointOnTheScore = () =>{
-    let i = 'ok'; 
-    goodAnswers.push(i);
-    let lengthGoodanswer = goodAnswers.length;
-    lengthGoodanswer ++;
-    console.log(lengthGoodanswer);
-} 
-
-/**
-* Show the user's score
-*/
-const showScore = ()=>{
-    const score = goodAnswers.length;
-    const doneScore = document.createElement('div');
-    doneScore.setAttribute('id','donescore');
-    const information = document.getElementById('information');
-    information.prepend(doneScore);
-    doneScore.textContent = score + ' / 11';
-    showTheScore.disabled = true;
-    const gifAnime = document.createElement('div');
-    information.prepend(gifAnime);
-    
-    if(score == 11){
-        gifAnime.innerHTML = '<img src="https://media.giphy.com/media/xUA7b2uqotaDunMxaw/giphy.gif" alt="bravo pour ton score" style="display:block; margin:auto;"><p class="bravo">Bravo ! Tu déchires !!!! Tu as obtenu :</p>'
-    } else if(score < 11 && score >= 8){
-        gifAnime.innerHTML ='<img src="https://media.giphy.com/media/l0MYSC9asVRDGWtEI/giphy.gif" alt="bravo pour ton score" style="display:block; margin:auto;"><p class="bravo">Bravo ! Tu as obtenu :</p>'
-    } else if(score >= 5 && score < 8){
-        gifAnime.innerHTML = '<img src="https://media.giphy.com/media/3oKIPzGXnfYyUYmSLS/giphy.gif" alt="bravo pour ton score" style="display:block; margin:auto;"><p class="bravo">Bravo ! Tu as obtenu :</p>'
-    } else if(score < 5 && score > 1 ){
-        gifAnime.innerHTML = '<img src="https://media.giphy.com/media/3o6wrjU8qqDrANCYH6/giphy.gif" alt="bravo pour ton score" style="display:block; margin:auto;"><p class="bravo">Bravo ! Tu as obtenu :</p>'
-    } else {
-        gifAnime.innerHTML = '<img src="https://media.giphy.com/media/3o7ZeyhOrwx6Px3OUg/giphy.gif" alt="bravo pour ton score" style="display:block; margin:auto;"><p class="bravo">Aïe ! Tu as obtenu :</p>'
-    } 
-} 
+const information = document.getElementById('information');
 
 const showTheScore = document.getElementById('showScore');
-showTheScore.addEventListener('click', () => {
-    showScore();    
-});
+showTheScore.addEventListener('click', () => showScore(goodAnswers, information, showTheScore) );
     
-
+/** --------------------------------
+ * Management of right answers
+---------------------------------- */
 for(let i = 0; i <= questions.length; i++){
+    
     answersGood[i].addEventListener('change', () => {
 
         if(answersGood[0].checked){
@@ -283,16 +253,14 @@ for(let i = 0; i <= questions.length; i++){
             questions[i].style.color = "white";
             questions[i].style.transition = 'background-color 0.8s, color 0.85s';
             allBadAnswers[i].forEach(badAnswer => badAnswer.disabled = true );
-            addPointOnTheScore();
+            addPointOnTheScore(goodAnswers);
         }
     });
 
 }
 
-
-
 /** --------------------------------
- * Gestion of Correct and bad answer
+ * Management of bad answers
 ---------------------------------- */
 
 /**
