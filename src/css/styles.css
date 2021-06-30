@@ -1,6 +1,10 @@
 * { box-sizing: border-box; }
 
 /* Typography */
+h1{
+    font-size: 5vw !important;
+    font-weight: 600 !important;
+}
 h2{
     text-align: center;
     font-size: 1.5em;
@@ -46,7 +50,7 @@ a:hover, a:focus, a:active {
 .fas, 
 .fa-futbol{
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 #chrono{
@@ -65,6 +69,7 @@ a:hover, a:focus, a:active {
 .jumbotron{
     background-color: #20325a;
     color: white;
+    border-radius: 0 !important;
 }
 .video-background{
     top: 0; right: 0; bottom: 0; left: 0;
@@ -183,8 +188,9 @@ button {
 }
 
 footer{
+    margin-top: 8vh;
     background-color: #20325a;
     color: white;
-    padding: 1.5em 6em;
+    padding: 12vh 2vw;
     text-align: center;
 }
