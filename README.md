@@ -11,9 +11,10 @@ En cas de mauvaise réponse, la correction de la question s'affiche.
 A la fin du quizz, il clique pour afficher son score.
 En fonction du score, le message s'adapte selon les points acquis.
 
-## Langages et framework utilisés : 
-* HTML5, CSS3, Bootstrap
-* JavaScript 
+## Langages, framework et outils utilisés : 
+* HTML5, CSS3, JavaScript
+* Bootstrap
+* Webpack 5 & Babel
 
 ## Pourquoi ce thème ?
 Envie de faire un pied de nez à ma petite frustration :) 
