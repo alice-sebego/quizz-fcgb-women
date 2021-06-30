@@ -71,6 +71,7 @@ a:hover, a:focus, a:active {
     color: white;
     border-radius: 0 !important;
 }
+
 .video-background{
     top: 0; right: 0; bottom: 0; left: 0;
     z-index: -99;
@@ -193,4 +194,24 @@ footer{
     color: white;
     padding: 12vh 2vw;
     text-align: center;
+}
+
+@media (min-width: 900px){
+    .display-4, 
+    .lead, 
+    #description,
+    hr{
+        display: block !important;
+        width: 75%;
+        margin: auto !important;
+    }
+
+    .video-background{
+        width: 65%;
+        margin: 1vh auto;
+    }
+
+    .quizz{
+        width: 60%;
+    }
 }
